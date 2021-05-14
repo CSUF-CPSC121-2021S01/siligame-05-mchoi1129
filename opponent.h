@@ -5,16 +5,6 @@
 #ifndef OPPONENT_H
 #define OPPONENT_H
 
-class Opponent : public GameElement {
- public:
-  Opponent() : GameElement(0, 0, 60, 60) {}
-  Opponent(int x, int y) : GameElement(x, y, 60, 60) {}
-
-  void Draw(graphics::Image& background) override;
-  void Move(const graphics::Image& opponent) override;
-  std::unique_ptr<OpponentProjectile> LaunchProjectiles();
-};
-
 class OpponentProjectile : public GameElement {
  public:
   OpponentProjectile() : GameElement(0, 0, 15, 15) {}
@@ -23,5 +13,16 @@ class OpponentProjectile : public GameElement {
   void Draw(graphics::Image& background) override;
   void Move(const graphics::Image& oppoProj) override;
 };
+
+class Opponent : public GameElement {
+ public:
+  Opponent() : GameElement(0, 0, 60, 60) {}
+  Opponent(int x, int y) : GameElement(x, y, 60, 60) {}
+
+  void Draw(graphics::Image& background) override;
+  void Move(const graphics::Image& opponent) override;
+  std::unique_ptr<OpponentProjectile> LaunchProjectile();
+};
+
 
 #endif

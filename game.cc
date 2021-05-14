@@ -42,7 +42,7 @@ void Game::UpdateScreen() {
   std::string text = "Score: " + std::to_string(GetScore());
   screen_.DrawText(10, 10, text, 14, 115, 10, 220);
   if (HasLost() == false) {
-    screen_.DrawText(400, 300, "Game Over", 20, 255, 255, 255);
+    screen_.DrawText(300, 250, "Game Over", 20, 255, 255, 255);
   }
 }
 
@@ -105,7 +105,6 @@ void Game::OnMouseEvent(const graphics::MouseEvent& mouse) {
       mouse.GetMouseAction() == graphics::MouseAction::kDragged) {
         std::unique_ptr<PlayerProjectile> proj = std::make_unique<PlayerProjectile>();
         std::unique_ptr<PlayerProjectile> other_proj;
-        other_proj = std::move(proj);
         playProj_.push_back(other_proj);
   }
 }
@@ -118,7 +117,7 @@ void Game::Init() {
 }
 
 void Game::OnAnimationStep() {
-  if (opponent_.size() = 0) {
+  if (opponent_.size() < 1) {
     CreateOpponents();
   }
   MoveGameElements();
@@ -127,6 +126,14 @@ void Game::OnAnimationStep() {
   RemoveInactive();
   UpdateScreen();
   screen_.Flush();
+}
+
+std::unique_ptr<OpponentProjectile> Game::LaunchProjectiles() {
+  for (int i = 0; opponent_.size(); i++) {
+    if (opponent_[i]->LaunchProjectile() != nullptr) {
+      opponent_.push_back(opponent_[i]->LaunchProjectile());
+    }
+  }
 }
 
 int Game::GetScore() { return score; }
