@@ -36,11 +36,14 @@ void Game::UpdateScreen() {
       playProj_[k]->Draw(screen_);
     }
   }
-  if (player_->GetIsActive()) {
-    player_->Draw(screen_);
+  if (player_.GetIsActive()) {
+    player_.Draw(screen_);
   }
-  std::string text = "Score: " + GetScore();
-  DrawText(40, 40, text, 14, 115, 10, 220);
+  std::string text = "Score: " + std::to_string(GetScore());
+  screen_.DrawText(10, 10, text, 14, 115, 10, 220);
+  if (HasLost() == false) {
+    screen_.DrawText(400, 300, "Game Over", 20, 255, 255, 255);
+  }
 }
 
 void Game::Start() { screen_.ShowUntilClosed(); }
@@ -59,22 +62,26 @@ void Game::MoveGameElements() {
 
 void Game::FilterIntersections() {
   for (int i = 0; i < opponent_.size(); i++) {
-    if (player_->IntersectsWith(opponent_[i].get())) {
-      player_->SetIsActive(false);
+    if (player_.IntersectsWith(opponent_[i])) {
+      player_.SetIsActive(false);
       opponent_[i]->SetIsActive(false);
     }
   }
   for (int j = 0; j < oppoProj_.size(); j++) {
-    if (player_->IntersectsWith(oppoProj_[j].get())) {
-      player_->SetIsActive(false);
+    if (player_.IntersectsWith(oppoProj_[j])) {
+      player_.SetIsActive(false);
       oppoProj_[j]->SetIsActive(false);
     }
   }
+  int score = 0;
   for (int l = 0; l < opponent_.size(); l++) {
     for (int k = 0; k < playProj_.size(); k++) {
-      if (playProj_[k]->IntersectsWith(opponent_[l].get())) {
+      if (playProj_[k]->IntersectsWith(opponent_[l])) {
         opponent_[l]->SetIsActive(false);
         playProj_[k]->SetIsActive(false);
+        if (player_.GetIsActive()) {
+          score++;
+        }
       }
     }
   }
@@ -122,21 +129,8 @@ void Game::OnAnimationStep() {
   screen_.Flush();
 }
 
-int Game::GetScore() {
-  int score = 0;
-  for (int l = 0; l < opponent_.size(); l++) {
-    for (int k = 0; k < playProj_.size(); k++) {
-      if (playProj_[k]->IntersectsWith(opponent_[l].get())) {
-        opponent_[l]->SetIsActive(false);
-        playProj_[k]->SetIsActive(false);
-        if (player_.GetIsActive) {
-          score++;
-        }
-      }
-    }
-  }
-  return score;
-}
+int Game::GetScore() { return score; }
+
 
 bool Game::HasLost() {
   if (player_.GetIsActive()) {
