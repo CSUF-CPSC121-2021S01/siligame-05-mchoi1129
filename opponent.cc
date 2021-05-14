@@ -47,5 +47,4 @@ std::unique_ptr<OpponentProjectile> Opponent::LaunchProjectile() {
       return nullptr;
     }
   }
-  
 }

@@ -31,7 +31,7 @@ class Game : public graphics::AnimationEventListener,
   void OnAnimationStep() override;
   void OnMouseEvent(const graphics::MouseEvent& mouse) override;
 
-  std::unique_ptr<OpponentProjectile> LaunchProjectiles();
+  void LaunchProjectiles();
   int GetScore();
   bool HasLost();
   void RemoveInactive();
