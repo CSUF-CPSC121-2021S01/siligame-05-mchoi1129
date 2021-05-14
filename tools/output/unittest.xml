@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="49" failures="1" disabled="0" errors="0" time="0.366" timestamp="2021-05-14T21:25:22.846" name="AllTests">
+  <testsuite name="GameElement" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.004" timestamp="2021-05-14T21:25:22.848">
+    <testcase name="DefaultConstructor" status="run" result="completed" time="0" timestamp="2021-05-14T21:25:22.848" classname="GameElement" />
+    <testcase name="ParametrizedConstructor" status="run" result="completed" time="0" timestamp="2021-05-14T21:25:22.849" classname="GameElement" />
+    <testcase name="IntersectsWithGameElement" status="run" result="completed" time="0" timestamp="2021-05-14T21:25:22.849" classname="GameElement" />
+    <testcase name="IsOutOfBounds" status="run" result="completed" time="0.004" timestamp="2021-05-14T21:25:22.849" classname="GameElement" />
+  </testsuite>
+  <testsuite name="Opponent" tests="6" failures="1" disabled="0" skipped="0" errors="0" time="0.344" timestamp="2021-05-14T21:25:22.854">
+    <testcase name="InheritsFromGameElement" status="run" result="completed" time="0" timestamp="2021-05-14T21:25:22.854" classname="Opponent" />
+    <testcase name="DefaultConstructor" status="run" result="completed" time="0" timestamp="2021-05-14T21:25:22.854" classname="Opponent" />
+    <testcase name="ParemterizedConstructor" status="run" result="completed" time="0" timestamp="2021-05-14T21:25:22.855" classname="Opponent" />
+    <testcase name="Draw" status="run" result="completed" time="0.339" timestamp="2021-05-14T21:25:22.855" classname="Opponent" />
+    <testcase name="Move" status="run" result="completed" time="0.001" timestamp="2021-05-14T21:25:23.195" classname="Opponent" />
+    <testcase name="LaunchProjectile" status="run" result="completed" time="0" timestamp="2021-05-14T21:25:23.197" classname="Opponent">
+      <failure message="../settings/unittest.cc:176&#x0A;Value of: has_projectile&#x0A;  Actual: false&#x0A;Expected: true&#x0A;The Opponentt should return a projectile." type=""><![CDATA[../settings/unittest.cc:176
+Value of: has_projectile
+  Actual: false
+Expected: true
+The Opponentt should return a projectile.]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="OpponentProjectile" tests="5" failures="0" disabled="0" skipped="5" errors="0" time="0.004" timestamp="2021-05-14T21:25:23.199">
+    <testcase name="InheritsFromGameElement" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.202" classname="OpponentProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="DefaultConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.203" classname="OpponentProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="ParemterizedConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.203" classname="OpponentProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Draw" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.203" classname="OpponentProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Move" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.203" classname="OpponentProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+  </testsuite>
+  <testsuite name="Player" tests="6" failures="0" disabled="0" skipped="6" errors="0" time="0.002" timestamp="2021-05-14T21:25:23.204">
+    <testcase name="InheritsFromGameElement" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.204" classname="Player">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="DefaultConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.204" classname="Player">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="ParemterizedConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.205" classname="Player">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Draw" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.205" classname="Player">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="IntersectsWithOpponentsAndProjectiles" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.206" classname="Player">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Move" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.206" classname="Player">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+  </testsuite>
+  <testsuite name="PlayerProjectile" tests="6" failures="0" disabled="0" skipped="6" errors="0" time="0.001" timestamp="2021-05-14T21:25:23.207">
+    <testcase name="InheritsFromGameElement" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.207" classname="PlayerProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="DefaultConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.207" classname="PlayerProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="ParemterizedConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.207" classname="PlayerProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Draw" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.207" classname="PlayerProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="IntersectsWithOpponent" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.208" classname="PlayerProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Move" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.208" classname="PlayerProjectile">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+  </testsuite>
+  <testsuite name="Game" tests="22" failures="0" disabled="0" skipped="22" errors="0" time="0.004" timestamp="2021-05-14T21:25:23.208">
+    <testcase name="DefaultConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.208" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="ParametrizedConstructor" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.208" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="CreateOpponents" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.209" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="MoveActiveGameElements" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.209" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="MoveInActiveGameElements" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.209" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="LaunchProjectiles" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.210" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="FilterIntersectionsWithOpponentProjectile" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.210" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="FilterIntersectionsWithOpponentProjectileNoIntersect" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.210" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="FilterIntersectionsWithOpponent" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.211" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="FilterIntersectionsWithOpponentNoIntersect" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.211" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Score" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.211" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="ScoreInactivePlayer" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.211" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="RemoveInactive" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.211" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="Init" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.211" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="UpdateScreen" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.211" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="UpdateScreenNoElements" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.212" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="OnAnimationStep" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.212" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="OnAnimationStepProjectiles" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.212" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="OnMouseEvent" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.212" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="OnMouseEventDragged" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.213" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="OnMouseEventPressed" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.213" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+    <testcase name="OnMouseEventOutOfBounds" status="run" result="skipped" time="0" timestamp="2021-05-14T21:25:23.213" classname="Game">
+      <skipped message="../settings/../cppaudit/gtest_ext.h:24&#x0A;Test skipped until other errors are fixed"><![CDATA[../settings/../cppaudit/gtest_ext.h:24
+Test skipped until other errors are fixed]]></skipped>
+    </testcase>
+  </testsuite>
+</testsuites>

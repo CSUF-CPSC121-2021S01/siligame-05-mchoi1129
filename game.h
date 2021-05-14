@@ -42,6 +42,7 @@ class Game : public graphics::AnimationEventListener,
   std::vector<std::unique_ptr<OpponentProjectile>> oppoProj_;
   std::vector<std::unique_ptr<PlayerProjectile>> playProj_;
   Player player_;
+  int score_ = 0;
 };
 
 #endif
