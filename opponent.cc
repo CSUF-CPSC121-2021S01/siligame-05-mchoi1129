@@ -21,6 +21,14 @@ void Opponent::Move(const graphics::Image& opponent) {
   }
 }
 
+std::unique_ptr<OpponentProjectile> Opponent::LaunchProjectiles() {
+  for (int i = 0; opponent_.size(); i++) {
+    if (opponent_[i]->LaunchProjectile() != nullptr) {
+      opponent_.push_back(opponent_[i]->LaunchProjectile());
+    }
+  }
+}
+
 void OpponentProjectile::Draw(graphics::Image& background) {
   graphics::Image opp_tile;
   opp_tile.Load("OpponentProjectile.bmp");
@@ -37,4 +45,8 @@ void OpponentProjectile::Move(const graphics::Image& oppoProj) {
   if (IsOutOfBounds(oppoProj)) {
     SetIsActive(false);
   }
+}
+
+std::unique_ptr Opponent::LaunchProjectiles() {
+  return std::unique_ptr<OpponentProjectile> other_proj(GetX(), GetY() + 70);
 }

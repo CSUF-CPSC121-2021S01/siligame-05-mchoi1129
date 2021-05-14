@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include "cpputils/graphics/image.h"
 #include "game_element.h"
 #ifndef OPPONENT_H
@@ -6,16 +7,17 @@
 
 class Opponent : public GameElement {
  public:
-  Opponent() : Opponent(0, 0) {}
+  Opponent() : GameElement(0, 0, 60, 60) {}
   Opponent(int x, int y) : GameElement(x, y, 60, 60) {}
 
   void Draw(graphics::Image& background) override;
   void Move(const graphics::Image& opponent) override;
+  std::unique_ptr<OpponentProjectile> LaunchProjectiles();
 };
 
 class OpponentProjectile : public GameElement {
  public:
-  OpponentProjectile() : OpponentProjectile(0, 0) {}
+  OpponentProjectile() : GameElement(0, 0, 15, 15) {}
   OpponentProjectile(int x, int y) : GameElement(x, y, 15, 15) {}
 
   void Draw(graphics::Image& background) override;

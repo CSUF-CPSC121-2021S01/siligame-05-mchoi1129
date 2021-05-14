@@ -7,7 +7,7 @@
 
 class Player : public GameElement {
  public:
-  Player() : Player(0, 0) {}
+  Player() : GameElement(0, 0, 60, 60) {}
   Player(int x, int y) : GameElement(x, y, 60, 60) {}
 
   void Draw(graphics::Image& background) override;
@@ -18,7 +18,7 @@ class Player : public GameElement {
 
 class PlayerProjectile : public GameElement {
  public:
-  PlayerProjectile() : PlayerProjectile(0, 0) {}
+  PlayerProjectile() : GameElement(0, 0, 15, 15) {}
   PlayerProjectile(int x, int y) : GameElement(x, y, 15, 15) {}
 
   void Draw(graphics::Image& background) override;

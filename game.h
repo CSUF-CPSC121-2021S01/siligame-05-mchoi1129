@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include <vector>
+#include <memory>
 #include "cpputils/graphics/image_event.h"
 #include "opponent.h"
 #include "player.h"
@@ -12,11 +13,11 @@ class Game : public graphics::AnimationEventListener,
   Game(int width, int height) : screen_(width, height) {}
 
   graphics::Image& GetGameScreen() { return screen_; }
-  std::vector<Opponent>& GetOpponents() { return opponent_; }
-  std::vector<OpponentProjectile>& GetOpponentProjectiles() {
+  std::vector<std::unique_ptr<Opponent>>& GetOpponents() { return opponent_; }
+  std::vector<std::unique_ptr<OpponentProjectile>>& GetOpponentProjectiles() {
     return oppoProj_;
   }
-  std::vector<PlayerProjectile>& GetPlayerProjectiles() { return playProj_; }
+  std::vector<std::unique_ptr<PlayerProjectile>>& GetPlayerProjectiles() { return playProj_; }
   Player& GetPlayer() { return player_; }
 
   void CreateOpponents();
@@ -30,11 +31,15 @@ class Game : public graphics::AnimationEventListener,
   void OnAnimationStep() override;
   void OnMouseEvent(const graphics::MouseEvent& mouse) override;
 
+  int GetScore();
+  bool HasLost();
+  void RemoveInactive();
+
  private:
   graphics::Image screen_;
-  std::vector<Opponent> opponent_;
-  std::vector<OpponentProjectile> oppoProj_;
-  std::vector<PlayerProjectile> playProj_;
+  std::vector<std::unique_ptr<Opponent>> opponent_;
+  std::vector<std::unique_ptr<OpponentProjectile>> oppoProj_;
+  std::vector<std::unique_ptr<PlayerProjectile>> playProj_;
   Player player_;
 };
 

@@ -12,11 +12,11 @@ void GameElement::PadPoints(std::vector<int>& points, int pad_x, int pad_y) {
     }
   }
 }
-bool GameElement::IntersectsWith(GameElement& element) {
-  if (element.GetX() >= x_ + width_ ||
-      element.GetX() + element.GetWidth() <= x_ ||
-      element.GetY() >= y_ + height_ ||
-      element.GetY() + element.GetHeight() <= y_) {
+bool GameElement::IntersectsWith(GameElement* element) {
+  if (element->GetX() >= x_ + width_ ||
+      element->GetX() + element->GetWidth() <= x_ ||
+      element->GetY() >= y_ + height_ ||
+      element->GetY() + element->GetHeight() <= y_) {
     return false;
   } else {
     return true;
