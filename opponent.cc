@@ -40,12 +40,11 @@ void OpponentProjectile::Move(const graphics::Image& oppoProj) {
 }
 
 std::unique_ptr<OpponentProjectile> Opponent::LaunchProjectile() {
-  for (int i = 1; i < 100; i++) {
-    if (i % 10 == 0) {
+    counter++;
+    if (counter % 10 == 0) {
       std::unique_ptr<OpponentProjectile> other_proj = std::make_unique<OpponentProjectile>(GetX(), GetY() + 70); 
       return std::move(other_proj);
     } else {
       return nullptr;
     }
-  }
 }
