@@ -13,7 +13,7 @@ void Player::Draw(graphics::Image& background) {
   }
 }
 
-void Player::Move(const graphics::Image& player) {}
+void Player::Move(const graphics::Image& screen) {}
 
 void PlayerProjectile::Draw(graphics::Image& background) {
   graphics::Image play_tile;
@@ -26,9 +26,9 @@ void PlayerProjectile::Draw(graphics::Image& background) {
   }
 }
 
-void PlayerProjectile::Move(const graphics::Image& playProj) {
+void PlayerProjectile::Move(const graphics::Image& screen) {
   SetY(GetY() - 3);
-  if (IsOutOfBounds(playProj)) {
+  if (IsOutOfBounds(screen)) {
     SetIsActive(false);
   }
 }

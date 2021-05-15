@@ -7,23 +7,23 @@
 
 class Player : public GameElement {
  public:
-  Player() : GameElement(0, 0, 60, 60) {}
+  Player() : Player(0, 0) {}
   Player(int x, int y) : GameElement(x, y, 60, 60) {}
 
   void Draw(graphics::Image& background) override;
   // bool IntersectsWith(const Opponent& intersect_opp);
   // bool IntersectsWith(const OpponentProjectile& intersect_opp_proj);
-  void Move(const graphics::Image& player) override;
+  void Move(const graphics::Image& screen) override;
 };
 
 class PlayerProjectile : public GameElement {
  public:
-  PlayerProjectile() : GameElement(0, 0, 15, 15) {}
+  PlayerProjectile() : PlayerProjectile(0, 0) {}
   PlayerProjectile(int x, int y) : GameElement(x, y, 15, 15) {}
 
   void Draw(graphics::Image& background) override;
   // bool IntersectsWith(const Opponent& intersect_play);
-  void Move(const graphics::Image& playProj) override;
+  void Move(const graphics::Image& screen) override;
 };
 
 #endif

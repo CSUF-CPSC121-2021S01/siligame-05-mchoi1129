@@ -11,7 +11,7 @@ class OpponentProjectile : public GameElement {
   OpponentProjectile(int x, int y) : GameElement(x, y, 15, 15) {}
 
   void Draw(graphics::Image& background) override;
-  void Move(const graphics::Image& oppoProj) override;
+  void Move(const graphics::Image& screen) override;
 };
 
 class Opponent : public GameElement {
@@ -20,11 +20,12 @@ class Opponent : public GameElement {
   Opponent(int x, int y) : GameElement(x, y, 60, 60) {}
 
   void Draw(graphics::Image& background) override;
-  void Move(const graphics::Image& opponent) override;
+  void Move(const graphics::Image& screen) override;
   std::unique_ptr<OpponentProjectile> LaunchProjectile();
 
  private:
   int counter = 1;
+  bool going_right_ = true;
 };
 
 #endif

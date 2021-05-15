@@ -3,27 +3,28 @@
 void Game::CreateOpponents() {
   for (int i = 0; i < 3; i++) {
     std::unique_ptr<Opponent> opponent =
-        std::make_unique<Opponent>(200 + 200 * i, 50);
+        std::make_unique<Opponent>(300 * i, 0);
     opponent_.push_back(std::move(opponent));
   }
 }
 void Game::CreateOpponentProjectiles() {
-  for (int i = 0; i < 3; i++) {
+  for (int i = 0; i < 2; i++) {
     std::unique_ptr<OpponentProjectile> oppoProj =
-        std::make_unique<OpponentProjectile>(200 + 200 * i, 130);
+        std::make_unique<OpponentProjectile>(200 * i, 100);
     oppoProj_.push_back(std::move(oppoProj));
   }
 }
 void Game::CreatePlayerProjectiles() {
   for (int i = 0; i < 3; i++) {
     std::unique_ptr<PlayerProjectile> playProj =
-        std::make_unique<PlayerProjectile>(200 + 200 * i, 450);
+        std::make_unique<PlayerProjectile>(100 * i, 450);
     playProj_.push_back(std::move(playProj));
   }
 }
 
 void Game::UpdateScreen() {
-  screen_.DrawRectangle(0, 0, 800, 600, graphics::Color(255, 255, 255));
+  if (!HasLost()) {
+screen_.DrawRectangle(0, 0, 800, 600, graphics::Color(255, 255, 255));
   for (int i = 0; i < opponent_.size(); i++) {
     if (opponent_[i]->GetIsActive()) {
       opponent_[i]->Draw(screen_);
@@ -43,9 +44,9 @@ void Game::UpdateScreen() {
     player_.Draw(screen_);
   }
   std::string text = "Score: " + std::to_string(GetScore());
-  screen_.DrawText(10, 10, text, 14, 115, 10, 220);
-  if (HasLost() == true) {
-    screen_.DrawText(300, 250, "Game Over", 20, 255, 255, 255);
+  screen_.DrawText(0, 0, text, 30, graphics::Color(115, 10, 220));
+  } else {
+    screen_.DrawText(300, 250, "Game Over", 50, graphics::Color(0, 0, 0));
   }
 }
 
@@ -72,14 +73,16 @@ void Game::MoveGameElements() {
 void Game::FilterIntersections() {
   for (int i = 0; i < opponent_.size(); i++) {
     if (player_.IntersectsWith(opponent_[i].get())) {
-      player_.SetIsActive(false);
+      //player_.SetIsActive(false);
       opponent_[i]->SetIsActive(false);
+      //has_lost_ = true;
     }
   }
   for (int j = 0; j < oppoProj_.size(); j++) {
     if (player_.IntersectsWith(oppoProj_[j].get())) {
       player_.SetIsActive(false);
       oppoProj_[j]->SetIsActive(false);
+      has_lost_ = true;
     }
   }
   for (int l = 0; l < opponent_.size(); l++) {
@@ -128,11 +131,11 @@ void Game::OnAnimationStep() {
   if (opponent_.size() < 1) {
     CreateOpponents();
   }
+  UpdateScreen();
   MoveGameElements();
   LaunchProjectiles();
   FilterIntersections();
   RemoveInactive();
-  UpdateScreen();
   screen_.Flush();
 }
 
@@ -148,13 +151,7 @@ void Game::LaunchProjectiles() {
 
 int Game::GetScore() { return score_; }
 
-bool Game::HasLost() {
-  if (player_.GetIsActive()) {
-    return false;
-  } else {
-    return true;
-  }
-}
+bool Game::HasLost() { return has_lost_; }
 
 void Game::RemoveInactive() {
   for (int i = opponent_.size() - 1; i >= 0; i--) {
