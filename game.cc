@@ -2,19 +2,22 @@
 
 void Game::CreateOpponents() {
   for (int i = 0; i < 3; i++) {
-    std::unique_ptr<Opponent> opponent = std::make_unique<Opponent>(200 + 200 * i, 50);
+    std::unique_ptr<Opponent> opponent =
+        std::make_unique<Opponent>(200 + 200 * i, 50);
     opponent_.push_back(std::move(opponent));
   }
 }
 void Game::CreateOpponentProjectiles() {
   for (int i = 0; i < 3; i++) {
-    std::unique_ptr<OpponentProjectile> oppoProj = std::make_unique<OpponentProjectile>(200 + 200 * i, 130);
+    std::unique_ptr<OpponentProjectile> oppoProj =
+        std::make_unique<OpponentProjectile>(200 + 200 * i, 130);
     oppoProj_.push_back(std::move(oppoProj));
   }
 }
 void Game::CreatePlayerProjectiles() {
   for (int i = 0; i < 3; i++) {
-    std::unique_ptr<PlayerProjectile> playProj = std::make_unique<PlayerProjectile>(200 + 200 * i, 450);
+    std::unique_ptr<PlayerProjectile> playProj =
+        std::make_unique<PlayerProjectile>(200 + 200 * i, 450);
     playProj_.push_back(std::move(playProj));
   }
 }
@@ -108,9 +111,9 @@ void Game::OnMouseEvent(const graphics::MouseEvent& mouse) {
   }
   if (mouse.GetMouseAction() == graphics::MouseAction::kPressed ||
       mouse.GetMouseAction() == graphics::MouseAction::kDragged) {
-        std::unique_ptr<PlayerProjectile> proj =
+    std::unique_ptr<PlayerProjectile> proj =
         std::make_unique<PlayerProjectile>(mouse.GetX(), mouse.GetY());
-        playProj_.push_back(std::move(proj));
+    playProj_.push_back(std::move(proj));
   }
 }
 
@@ -135,7 +138,8 @@ void Game::OnAnimationStep() {
 
 void Game::LaunchProjectiles() {
   for (int i = 0; opponent_.size(); i++) {
-    std::unique_ptr<OpponentProjectile> opponents = opponent_[i]->LaunchProjectile();
+    std::unique_ptr<OpponentProjectile> opponents =
+        opponent_[i]->LaunchProjectile();
     if (opponents != nullptr) {
       oppoProj_.push_back(std::move(opponents));
     }

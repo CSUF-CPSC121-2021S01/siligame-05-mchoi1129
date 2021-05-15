@@ -22,9 +22,9 @@ class Opponent : public GameElement {
   void Draw(graphics::Image& background) override;
   void Move(const graphics::Image& opponent) override;
   std::unique_ptr<OpponentProjectile> LaunchProjectile();
+
  private:
   int counter = 1;
 };
-
 
 #endif

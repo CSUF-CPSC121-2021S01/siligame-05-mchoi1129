@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
-#include <vector>
 #include <memory>
+#include <vector>
 #include "cpputils/graphics/image_event.h"
 #include "opponent.h"
 #include "player.h"
@@ -17,7 +17,9 @@ class Game : public graphics::AnimationEventListener,
   std::vector<std::unique_ptr<OpponentProjectile>>& GetOpponentProjectiles() {
     return oppoProj_;
   }
-  std::vector<std::unique_ptr<PlayerProjectile>>& GetPlayerProjectiles() { return playProj_; }
+  std::vector<std::unique_ptr<PlayerProjectile>>& GetPlayerProjectiles() {
+    return playProj_;
+  }
   Player& GetPlayer() { return player_; }
 
   void CreateOpponents();
