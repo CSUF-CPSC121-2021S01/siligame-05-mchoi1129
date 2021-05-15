@@ -137,7 +137,7 @@ void Game::OnAnimationStep() {
 }
 
 void Game::LaunchProjectiles() {
-  for (int i = 0; opponent_.size(); i++) {
+  for (int i = 0; i < opponent_.size(); i++) {
     std::unique_ptr<OpponentProjectile> opponents =
         opponent_[i]->LaunchProjectile();
     if (opponents != nullptr) {
