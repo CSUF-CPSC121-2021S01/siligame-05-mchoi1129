@@ -44,7 +44,7 @@ void Game::UpdateScreen() {
   }
   std::string text = "Score: " + std::to_string(GetScore());
   screen_.DrawText(10, 10, text, 14, 115, 10, 220);
-  if (HasLost() == false) {
+  if (HasLost() == true) {
     screen_.DrawText(300, 250, "Game Over", 20, 255, 255, 255);
   }
 }
@@ -150,25 +150,25 @@ int Game::GetScore() { return score_; }
 
 bool Game::HasLost() {
   if (player_.GetIsActive()) {
-    return true;
-  } else {
     return false;
+  } else {
+    return true;
   }
 }
 
 void Game::RemoveInactive() {
-  for (int i = 0; i < opponent_.size(); i++) {
-    if (opponent_[i]->GetIsActive() == false) {
+  for (int i = opponent_.size() - 1; i >= 0; i--) {
+    if (!opponent_[i]->GetIsActive()) {
       opponent_.erase(opponent_.begin() + i);
     }
   }
-  for (int j = 0; j < oppoProj_.size(); j++) {
-    if (oppoProj_[j]->GetIsActive() == false) {
+  for (int j = oppoProj_.size() - 1; j >= 0; j--) {
+    if (!oppoProj_[j]->GetIsActive()) {
       oppoProj_.erase(oppoProj_.begin() + j);
     }
   }
-  for (int k = 0; k < playProj_.size(); k++) {
-    if (playProj_[k]->GetIsActive() == false) {
+  for (int k = playProj_.size() - 1; k >= 0; k--) {
+    if (!playProj_[k]->GetIsActive()) {
       playProj_.erase(playProj_.begin() + k);
     }
   }
