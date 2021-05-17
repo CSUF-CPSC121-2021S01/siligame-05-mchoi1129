@@ -21,10 +21,10 @@
 <replacement offset='116' length='1'></replacement>
 <replacement offset='462' length='0'> </replacement>
 <replacement offset='463' length='1'></replacement>
-<replacement offset='625' length='0'> </replacement>
-<replacement offset='626' length='1'></replacement>
-<replacement offset='992' length='0'> </replacement>
-<replacement offset='993' length='1'></replacement>
+<replacement offset='820' length='0'> </replacement>
+<replacement offset='821' length='1'></replacement>
+<replacement offset='1187' length='0'> </replacement>
+<replacement offset='1188' length='1'></replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
@@ -37,22 +37,22 @@
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
-<replacement offset='2741' length='0'> </replacement>
-<replacement offset='2742' length='1'></replacement>
+<replacement offset='2821' length='0'> </replacement>
+<replacement offset='2822' length='1'></replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
 <replacement offset='0' length='104'>#include "cpputils/graphics/image.h"&#10;#include "game_element.h"&#10;#include "opponent.h"&#10;#include &lt;iostream></replacement>
 <replacement offset='175' length='2'>&#10;</replacement>
-<replacement offset='309' length='0'> </replacement>
-<replacement offset='310' length='1'></replacement>
-<replacement offset='495' length='0'> </replacement>
-<replacement offset='496' length='1'></replacement>
-<replacement offset='564' length='2'>&#10;</replacement>
-<replacement offset='718' length='0'> </replacement>
-<replacement offset='719' length='1'></replacement>
-<replacement offset='833' length='0'> </replacement>
-<replacement offset='834' length='1'></replacement>
+<replacement offset='296' length='0'> </replacement>
+<replacement offset='297' length='1'></replacement>
+<replacement offset='482' length='0'> </replacement>
+<replacement offset='483' length='1'></replacement>
+<replacement offset='551' length='2'>&#10;</replacement>
+<replacement offset='702' length='0'> </replacement>
+<replacement offset='703' length='1'></replacement>
+<replacement offset='817' length='0'> </replacement>
+<replacement offset='818' length='1'></replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
@@ -62,32 +62,28 @@
 <replacement offset='346' length='1'></replacement>
 <replacement offset='402' length='0'> </replacement>
 <replacement offset='403' length='1'></replacement>
-<replacement offset='465' length='2'>&#10;</replacement>
-<replacement offset='603' length='0'> </replacement>
-<replacement offset='604' length='1'></replacement>
-<replacement offset='660' length='0'> </replacement>
-<replacement offset='661' length='1'></replacement>
-<replacement offset='739' length='3'>&#10;&#10;</replacement>
+<replacement offset='463' length='2'>&#10;</replacement>
+<replacement offset='601' length='0'> </replacement>
+<replacement offset='602' length='1'></replacement>
+<replacement offset='658' length='0'> </replacement>
+<replacement offset='659' length='1'></replacement>
+<replacement offset='735' length='3'>&#10;&#10;</replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
 <replacement offset='101' length='2'>&#10;</replacement>
-<replacement offset='385' length='0'> </replacement>
-<replacement offset='386' length='1'></replacement>
-<replacement offset='423' length='0'> </replacement>
-<replacement offset='424' length='1'></replacement>
-<replacement offset='657' length='0'> </replacement>
-<replacement offset='658' length='1'></replacement>
-<replacement offset='713' length='0'> </replacement>
-<replacement offset='714' length='1'></replacement>
-<replacement offset='761' length='0'> </replacement>
-<replacement offset='762' length='1'></replacement>
-<replacement offset='815' length='0'> </replacement>
-<replacement offset='816' length='1'></replacement>
-<replacement offset='825' length='3'>&#10;&#10;</replacement>
-<replacement offset='872' length='0'> </replacement>
-<replacement offset='873' length='1'></replacement>
-<replacement offset='904' length='3'>&#10;&#10;</replacement>
+<replacement offset='632' length='0'> </replacement>
+<replacement offset='633' length='1'></replacement>
+<replacement offset='688' length='0'> </replacement>
+<replacement offset='689' length='1'></replacement>
+<replacement offset='736' length='0'> </replacement>
+<replacement offset='737' length='1'></replacement>
+<replacement offset='790' length='0'> </replacement>
+<replacement offset='791' length='1'></replacement>
+<replacement offset='800' length='3'>&#10;&#10;</replacement>
+<replacement offset='847' length='0'> </replacement>
+<replacement offset='848' length='1'></replacement>
+<replacement offset='879' length='3'>&#10;&#10;</replacement>
 </replacements>
 <?xml version='1.0'?>
 <replacements xml:space='preserve' incomplete_format='false'>
